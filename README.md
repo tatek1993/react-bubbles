@@ -27,9 +27,30 @@ In this project you will create a login page and request a token from the server
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Explain what a token is used for.
+
+      A token is issued by the server in exchange for correct login credentials, and can be stored in the localStorage to authorize the user to access protected data.
+
 - [ ] What steps can you take in your web apps to keep your data secure?
+
+      You can use private routes the prevent users who have not gotten an authentication token from seeing restricted data. 
+
 - [ ] Describe how web servers work.
+
+       A Browser will make a request for a website, that request goes from the computer to the modem then to the ISP, and then locates the WebServer that is storing the data for that web address. Then that server will provide the code for that website 
+
 - [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+      -CREATE (.post)
+        - .post is used to add new data to the server and it takes 2 arguemtns - a URl path and the data that we want to add there
+
+      -READ (.get)
+        -  .get retreives data from the server and takes an argument of a URL path usually
+
+      -UPDATE (.put)
+        -  .put is used to change a resource's information. It takes 2 arguments - a bodt object(a path to your webpage), and the data that needs to be updated
+
+      -DELETE (.delete)
+        - .delete is used to tell the server to destroy specific data. It takes an arugement of a URL containing a dynamic string (usually http://.../${id}) 
 
 
 ## Project Set Up
