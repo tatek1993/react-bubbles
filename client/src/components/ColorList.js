@@ -33,9 +33,13 @@ const ColorList = ({ colors, updateColors, setDependency }) => {
 
   const deleteColor = color => {
     // make a delete request to delete this color
-    axiosWithAuth(
-      
-    )
+    axiosWithAuth()
+      .delete(`/colors/${colorToEdit.id}`, color)
+      .then(res => {
+        updateColors(colors.filter(item => item.id !== colorToEdit ))
+        setDependency(true);
+      })
+      .catch(err => console.log('This is an error!', err))
   };
 
   return (
